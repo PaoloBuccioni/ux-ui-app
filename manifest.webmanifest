@@ -1,0 +1,11 @@
+{
+  "name": "Cock Rating",
+  "short_name": "Cock Rating",
+  "description": "Gestionale del pollaio e social tra allevatori (prototipo)",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#FBF6EE",
+  "theme_color": "#B5442A",
+  "lang": "it"
+}

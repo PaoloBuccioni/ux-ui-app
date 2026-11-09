@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Cock Rating</title>
+  <meta name="description" content="Cock Rating — gestionale del pollaio e social tra allevatori (prototipo)">
+
+  <!-- Apertura a schermo intero dalla schermata Home -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Cock Rating">
+  <meta name="theme-color" content="#B5442A">
+  <link rel="manifest" href="manifest.webmanifest">
+
+  <!-- Tailwind via CDN + design token -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          // Design token: modificare solo qui, mai valori scritti a mano sugli elementi
+          colors: {
+            brand: { DEFAULT: '#B5442A', dark: '#8A3220' },
+            surface: '#FBF6EE',
+            ink: { DEFAULT: '#2B2118', muted: '#6E5F52' },
+          },
+          fontFamily: {
+            sans: ['system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'sans-serif'],
+          },
+          spacing: {
+            gutter: '1rem',
+            tap: '44px', // area toccabile minima
+            // margine del contenuto + safe area del dispositivo
+            'safe-t': 'calc(1rem + env(safe-area-inset-top))',
+            'safe-r': 'calc(1rem + env(safe-area-inset-right))',
+            'safe-b': 'calc(1rem + env(safe-area-inset-bottom))',
+            'safe-l': 'calc(1rem + env(safe-area-inset-left))',
+          },
+          minHeight: { tap: '44px', screen: '100dvh' },
+          minWidth: { tap: '44px' },
+          height: { screen: '100dvh' },
+        },
+      },
+    };
+  </script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-surface text-ink font-sans antialiased">
+  <main id="app" class="pt-safe-t pr-safe-r pb-safe-b pl-safe-l min-h-screen flex flex-col items-center justify-center text-center">
+    <h1 class="text-2xl font-bold text-brand">Cock Rating</h1>
+    <p class="mt-gutter text-ink-muted">Cock Rating — prototipo in costruzione</p>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
