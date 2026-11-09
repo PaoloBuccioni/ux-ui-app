@@ -1,0 +1,16 @@
+/* Solo ciò che Tailwind non copre: colori e spaziature restano nei token */
+
+/* Ritardo per le animazioni in sequenza */
+.ritardo-1 { animation-delay: 0.15s; }
+
+/* Niente evidenziazione grigia al tocco su iOS */
+a, button { -webkit-tap-highlight-color: transparent; }
+
+/* Rispetta chi ha chiesto di ridurre le animazioni */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
