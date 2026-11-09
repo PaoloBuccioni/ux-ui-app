@@ -86,8 +86,8 @@
 </head>
 <body class="bg-surface text-ink font-sans text-body antialiased overflow-x-clip">
 
-  <!-- Pagina 1 -->
-  <section id="pagina-1" data-pagina class="hidden pt-safe-t pr-safe-r pb-safe-b pl-safe-l min-h-screen flex-col items-center justify-center text-center gap-section">
+  <!-- Home: visibile già nell'HTML (niente "hidden"), così un errore JS non lascia la pagina bianca -->
+  <section id="home" data-pagina class="flex pt-safe-t pr-safe-r pb-safe-b pl-safe-l min-h-screen flex-col items-center justify-center text-center gap-section">
     <div class="text-hero animate-dondola" aria-hidden="true">🐓</div>
     <div class="animate-sali">
       <p class="text-ink-muted">Pagina 1</p>
@@ -106,7 +106,7 @@
       <p class="text-ink-muted">Pagina 2</p>
       <h1 class="text-title font-bold text-brand">Sei arrivato!</h1>
     </div>
-    <a href="#pagina-1"
+    <a href="#home"
        class="animate-sali ritardo-1 inline-flex items-center justify-center min-h-tap min-w-button px-section rounded-button border-2 border-brand text-brand font-semibold transition active:scale-95 active:bg-brand active:text-ink-inverse">
       ← Indietro
     </a>
